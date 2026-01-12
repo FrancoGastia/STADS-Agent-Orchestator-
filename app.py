@@ -55,7 +55,7 @@ def create_conversation(api_key, user_message, private_files=None):
     headers = {
         "accept": "*/*",
         "content-type": "application/json",
-        "Authorization": f"Bearer {api_key}"
+        "X-Api-Key": api_key
     }
     
     body = {
@@ -96,7 +96,7 @@ def get_answer(api_key, conversation_id, request_id, max_attempts=30):
     
     headers = {
         "accept": "*/*",
-        "Authorization": f"Bearer {api_key}"
+        "X-Api-Key": api_key
     }
     
     params = {

@@ -12,9 +12,12 @@ load_dotenv()
 # ===========================
 
 # API Keys de Toqan (una por cada agente)
-ORCHESTRATOR_API_KEY = os.getenv("sk_94b5b1b5f4cfa5c995ede435ec70762d07253e78ac0d85694b29dbf89a15d493ad68b7c528c22b531ff5e661440bc03719fa432b7f2247c1dcad5afa871d")
-FAQ_AGENT_API_KEY = os.getenv("sk_2104a9a6a926556b764c1c1db4fea479b696ecc233e2468b65d3d4f94a97e8b1fb1bd2a74eb03c1972da691f3c9299e54d42367e0d1ed48049bbb338e59a")
-REPORTS_AGENT_API_KEY = os.getenv("sk_fe64ba291d1f9315d9a3664ed04c312cd2b14f86f0342586aa33f0ae1b3096b5a06fa92382af082c172ad1625c5b5bcf98576819c834ddc05669dcc25606")
+ORCHESTRATOR_API_KEY = st.secrets.get("ORCHESTRATOR_API_KEY") or os.getenv("ORCHESTRATOR_API_KEY")
+FAQ_AGENT_API_KEY = st.secrets.get("FAQ_AGENT_API_KEY") or os.getenv("FAQ_AGENT_API_KEY")
+REPORTS_AGENT_API_KEY = st.secrets.get("REPORTS_AGENT_API_KEY") or os.getenv("REPORTS_AGENT_API_KEY")
+TEAM_PASSWORD = st.secrets.get("TEAM_PASSWORD") or os.getenv("TEAM_PASSWORD", "mi_equipo_2024")
+
+
 
 # Contraseña para acceso privado
 TEAM_PASSWORD = os.getenv("TEAM_PASSWORD", "STADS2026")

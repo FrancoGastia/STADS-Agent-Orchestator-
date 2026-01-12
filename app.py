@@ -15,12 +15,7 @@ load_dotenv()
 ORCHESTRATOR_API_KEY = st.secrets.get("ORCHESTRATOR_API_KEY") or os.getenv("ORCHESTRATOR_API_KEY")
 FAQ_AGENT_API_KEY = st.secrets.get("FAQ_AGENT_API_KEY") or os.getenv("FAQ_AGENT_API_KEY")
 REPORTS_AGENT_API_KEY = st.secrets.get("REPORTS_AGENT_API_KEY") or os.getenv("REPORTS_AGENT_API_KEY")
-TEAM_PASSWORD = st.secrets.get("TEAM_PASSWORD") or os.getenv("TEAM_PASSWORD", "mi_equipo_2024")
-
-
-
-# Contraseña para acceso privado
-TEAM_PASSWORD = os.getenv("TEAM_PASSWORD", "STADS2026")
+TEAM_PASSWORD = st.secrets.get("TEAM_PASSWORD") or os.getenv("TEAM_PASSWORD", "STADS2026")
 
 # URL base de la API de Toqan
 BASE_URL = "https://api.toqan.ai/api"

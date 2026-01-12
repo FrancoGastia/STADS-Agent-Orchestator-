@@ -17,7 +17,7 @@ FAQ_AGENT_API_KEY = os.getenv("sk_2104a9a6a926556b764c1c1db4fea479b696ecc233e246
 REPORTS_AGENT_API_KEY = os.getenv("sk_fe64ba291d1f9315d9a3664ed04c312cd2b14f86f0342586aa33f0ae1b3096b5a06fa92382af082c172ad1625c5b5bcf98576819c834ddc05669dcc25606")
 
 # Contraseña para acceso privado
-TEAM_PASSWORD = os.getenv("TEAM_PASSWORD", "mi_equipo_2024")
+TEAM_PASSWORD = os.getenv("TEAM_PASSWORD", "STADS2026")
 
 # URL base de la API de Toqan
 BASE_URL = "https://api.toqan.ai/api"

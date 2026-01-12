@@ -79,7 +79,7 @@ def create_conversation(api_key, user_message, private_files=None):
         return None
 
 
-def get_answer(api_key, conversation_id, request_id, max_attempts=30):
+def get_answer(api_key, conversation_id, request_id, max_attempts=60):
     """
     Obtiene la respuesta del agente (con polling hasta que termine)
     
@@ -120,7 +120,7 @@ def get_answer(api_key, conversation_id, request_id, max_attempts=30):
                     return None
                 elif status == "in_progress":
                     # Esperar 2 segundos antes de reintentar
-                    time.sleep(2)
+                    time.sleep(1)
                     continue
                     
             else:

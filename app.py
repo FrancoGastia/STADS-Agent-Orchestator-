@@ -193,12 +193,10 @@ def orchestrate(user_query, faq_docs):
     st.info("🤔 Analizando tu consulta...")
     
     orchestrator_prompt = f"""Eres un clasificador. Debes decidir si la siguiente consulta del usuario es sobre:
-- FAQ: Preguntas frecuentes sobre el producto
-- REPORTE: Consultas sobre campañas, métricas, reportes
-
 Responde ÚNICAMENTE con una de estas palabras: FAQ o REPORTE
 
-Consulta del usuario: {user_query}"""
+CONSULTA: {user_query}
+¿Es FAQ o REPORTE?"""
     
     decision = call_agent(ORCHESTRATOR_API_KEY, orchestrator_prompt)
     

@@ -192,8 +192,7 @@ def orchestrate(user_query, faq_docs):
     # Paso 1: Orquestador decide
     st.info("🤔 Analizando tu consulta...")
     
-    orchestrator_prompt = f"""Eres un clasificador. Debes decidir si la siguiente consulta del usuario es sobre:
-Responde ÚNICAMENTE con una de estas palabras: FAQ o REPORTE
+    orchestrator_prompt = f"""Clasifica esta consulta del usuario.
 
 CONSULTA: {user_query}
 ¿Es FAQ o REPORTE?"""
